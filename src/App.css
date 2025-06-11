@@ -4,79 +4,7 @@
   box-sizing: border-box;
 }
 
-html, body {
-  height: 100%;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-.main-layout {
-  display: flex;
-  height: 100vh;
-}
-
-.sidebar {
-  background-color: transparent;
-  color: white;
-  width: 35%;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  position: sticky;
-  top: 0;
-  height: 100vh;
-}
-
-.sidebar h1 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-  color: #ffffffec;
-}
-
-.sidebar h2 {
-  font-size: 1.2rem;
-  font-weight: normal;
-  margin-bottom: 1rem;
-  color: #ffffffec;
-}
-
-.slogan {
-  font-style: italic;
-  margin-bottom: 2rem;
-}
-
-.nav-menu {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.nav-menu a {
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s ease;
-}
-
-.nav-menu a:hover {
-  color: #4fc3f7;
-}
-
-.content {
-  width: 65%;
-  padding: 2rem;
-  overflow-y: auto;
-  scroll-behavior: smooth;
-  color: #ffffff;
-}
-
-.content section {
-  margin-bottom: 4rem;
-}
-
 body {
-  margin-top: 100px;
-  margin-left: 50px;
   background-color: #0d1b2a;
   background-image: radial-gradient(
     circle at var(--x, 50%) var(--y, 50%),
@@ -87,8 +15,52 @@ body {
   background-size: cover;
   transition: background-position 0.1s;
   min-height: 100vh;
-
   font-family: 'Poppins', sans-serif;
+}
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.main-layout {
+  margin-left: 20px;
+  display: flex;
+  height: 100vh;
+  overflow: hidden; 
+}
+
+.content::-webkit-scrollbar {
+  display: none; /* Chrome, Safari y Opera */
+}
+
+.content {
+  width: 60%;
+  padding: 2rem;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  color: #ffffff;
+  height: 100vh;
+
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
+}
+
+.content section {
+  margin-bottom: 4rem;
+}
+
+.content h2 {
+  font-size: 2rem;
+}
+
+.paragraph {
+  margin-top: 1rem;
+  color: #ffffffec;
+  line-height: 1.6;
 }
 
 .social-icons {

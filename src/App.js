@@ -1,46 +1,68 @@
-import React, { useEffect } from 'react';
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import React, { useEffect, useState, useRef } from 'react';
 import './App.css';
+import Sidebar from './components/Sidebar';
+import About from './components/About/About';
+import Education from './components/Education/Education';
+import Experience from './components/Experience/Experience';
+import Projects from './components/Projects/Projects';
 
 function App() {
+  const [activeSection, setActiveSection] = useState('about');
+  const sectionRefs = useRef({});
+
+  const sections = ['about', 'education', 'experience', 'projects'];
+
+  const handleNavClick = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setActiveSection(id);
+    }
+  };
+
   useEffect(() => {
+    // Actualizar posición de la iluminación según mouse
     const handleMouseMove = (e) => {
       document.body.style.setProperty('--x', `${e.clientX}px`);
       document.body.style.setProperty('--y', `${e.clientY}px`);
     };
 
     window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
+
+    // Setup Intersection Observer para secciones
+    sections.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) sectionRefs.current[id] = el;
+    });
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    Object.values(sectionRefs.current).forEach((section) => observer.observe(section));
+
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+      observer.disconnect();
+    };
   }, []);
 
   return (
     <div className="main-layout">
-      <div className="sidebar">
-        <h1>John Edward Fajardo</h1>
-        <h2>Desarrollador Java Junior</h2>
-        <p className="slogan">Transformando ideas en software funcional</p>
-
-        <nav className="nav-menu">
-          <a href="#about">Acerca de mí</a>
-          <a href="#experience">Experiencia</a>
-          <a href="#education">Educación</a>
-          <a href="#projects">Proyectos</a>
-          <div className="social-icons">
-            <a href="https://github.com/boiward?tab=repositories" target="_blank" rel="noopener noreferrer">
-              <FaGithub size={35} />
-            </a>
-            <a href="https://www.linkedin.com/in/john-edward-fajardo-londo%C3%B1o-44883a295/" target="_blank" rel="noopener noreferrer">
-              <FaLinkedin size={35} />
-            </a>
-          </div>
-        </nav>
-      </div>
+      <Sidebar activeSection={activeSection} onNavClick={handleNavClick} />
 
       <div className="content">
-        <section id="about"><h2>Acerca de mí</h2></section>
-        <section id="experience"><h2>Experiencia</h2></section>
-        <section id="education"><h2>Educación</h2></section>
-        <section id="projects"><h2>Proyectos</h2></section>
+        <About />
+        <Education />
+        <Experience />
+        <Projects />
       </div>
     </div>
   );

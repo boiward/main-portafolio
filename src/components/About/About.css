@@ -1,0 +1,13 @@
+#about {
+  padding: 2rem 0;
+}
+
+.paragraph {
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  max-width: 90%;
+
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.6;
+}

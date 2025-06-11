@@ -1,0 +1,128 @@
+.sidebar {
+  position: sticky; /* para mantener fijo */
+  top: 0;
+  height: 100vh;
+  width: 40%;
+  padding: 3rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: transparent;
+  color: white;
+  user-select: none;
+  
+}
+.sidebar h1 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  line-height: 1.1;
+  color: #dcd3ff;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 0 0 6px rgba(124, 114, 255, 0.4);
+  margin-bottom: 0.2rem;
+}
+
+.sidebar h2 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #a597f7;
+  letter-spacing: 0.03em;
+  text-shadow: 0 0 4px rgba(124, 114, 255, 0.25);
+  margin-bottom: 2.5rem;
+  font-style: normal;
+}
+
+
+.slogan {
+  font-style: italic;
+  font-size: 1.15rem;
+  margin-bottom: 2.8rem;
+  color: #e0dfffcc;
+  max-width: 90%;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  width: 100%;
+  max-width: 280px;
+}
+
+.nav-menu a,
+.nav-link {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.15rem;
+  padding: 0.45rem 0;
+  border-radius: 6px;
+  transition: color 0.25s ease, background-color 0.25s ease;
+  position: relative;
+}
+
+.nav-menu a:hover,
+.nav-link:hover {
+  color: #6bc1ff;
+  background-color: rgba(76, 0, 255, 0.15);
+}
+
+.nav-menu a.active,
+.nav-link.active {
+  font-weight: 700;
+  font-size: 1.35rem;
+  color: #6bc1ff;
+  background-color: rgba(76, 0, 255, 0.32);
+  box-shadow: 0 0 12px rgba(76, 0, 255, 0.65);
+  border-left: 5px solid #8e7aff;
+}
+
+.nav-indicator {
+  display: none; /* no es necesario con el borde lateral */
+}
+
+.social-social-icons {
+  position: absolute;
+  bottom: 2rem;
+  left: 2.5rem;
+  display: flex;
+  gap: 1.6rem;
+}
+
+.social-social-icons a {
+  color: white;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-social-icons a:hover {
+  color: #4fc3f7;
+  transform: scale(1.25);
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    box-shadow: none;
+    border-right: none;
+    padding: 2rem 1.5rem;
+  }
+
+  .social-social-icons {
+    left: 1.5rem;
+    bottom: 1.5rem;
+  }
+
+  .nav-menu {
+    max-width: 100%;
+  }
+}

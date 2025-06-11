@@ -1,0 +1,80 @@
+.education-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.education-card {
+  display: flex;
+  gap: 1.5rem;
+  background: linear-gradient(145deg, #0d1a2b, #112240);
+  border-radius: 14px;
+  padding: 1.8rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  align-items: center;
+  min-height: 160px;
+}
+
+.education-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6);
+}
+
+.institution-logo {
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  object-fit: contain;
+  background-color: #ffffff11;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.2); /* brillo suave */
+  padding: 0.3rem;
+  align-self: flex-start; /* Mueve el logo hacia arriba */
+  margin-top: 0.3rem;      /* Ajuste fino opcional */
+}
+
+
+/* Contenedor del contenido textual */
+.education-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.education-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.3rem;
+  color: #4fc3f7;
+}
+
+.degree {
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+  color: #ffffffde;
+}
+
+.period {
+  font-style: italic;
+  font-size: 0.9rem;
+  margin-bottom: 0.6rem;
+  color: #90a4ae;
+}
+
+/* Nueva: Descripción de la institución */
+.institution-description {
+  font-size: 0.95rem;
+  color: #ffffffc5;
+  line-height: 1.5;
+  max-width: 95%;
+}
+
+.education-summary {
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  max-width: 90%;
+
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.6;
+}
