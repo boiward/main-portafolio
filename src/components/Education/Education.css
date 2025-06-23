@@ -73,8 +73,47 @@
   margin-top: 0.5rem;
   margin-bottom: 1.5rem;
   max-width: 90%;
+  text-align: justify;
 
   font-size: 1rem;
   color: #ccc;
   line-height: 1.6;
+}
+
+@media (max-width: 767px) {
+  .education-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    min-height: auto;
+  }
+
+  .institution-logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+    align-self: center;
+  }
+
+  .education-info {
+    width: 100%;
+  }
+
+  .education-card h3 {
+    font-size: 1.2rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .degree,
+  .period,
+  .institution-description {
+    text-align: center;
+  }
+
+  .institution-description {
+    font-size: 0.88rem;
+    line-height: 1.4;
+    margin-top: 0.5rem;
+  }
 }

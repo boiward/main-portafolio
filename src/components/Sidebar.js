@@ -23,12 +23,16 @@ function Sidebar({ activeSection, onNavClick }) {
 
   return (
     <div className="sidebar">
-      <h1>John Edward Fajardo</h1>
-      <h2>Desarrollador Junior</h2>
-      <p className="slogan">Transformando ideas en software funcional</p>
+      <div class="sidebar-header">
+        <h1>John Edward Fajardo</h1>
+        <h2>Desarrollador Junior</h2>
+        <div class="divider"></div>
+        <p class="slogan">Construyendo software sólido, accesible y con propósito</p>
+      </div>
 
       <nav className="nav-menu">
         {renderNavLink('about', 'Acerca de mí')}
+        {renderNavLink('skills', 'Habilidades')}
         {renderNavLink('education', 'Educación')}
         {renderNavLink('experience', 'Experiencia')}
         {renderNavLink('projects', 'Proyectos')}

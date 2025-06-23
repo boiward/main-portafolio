@@ -1,16 +1,16 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import Sidebar from './components/Sidebar';
 import About from './components/About/About';
 import Education from './components/Education/Education';
 import Experience from './components/Experience/Experience';
 import Projects from './components/Projects/Projects';
+import Skills from './components/Skills/Skills';
 
 function App() {
   const [activeSection, setActiveSection] = useState('about');
-  const sectionRefs = useRef({});
 
-  const sections = ['about', 'education', 'experience', 'projects'];
+  const sections = ['about', 'skills', 'education', 'experience', 'projects'];
 
   const handleNavClick = (id) => {
     const section = document.getElementById(id);
@@ -21,32 +21,31 @@ function App() {
   };
 
   useEffect(() => {
-    // Actualizar posición de la iluminación según mouse
     const handleMouseMove = (e) => {
       document.body.style.setProperty('--x', `${e.clientX}px`);
       document.body.style.setProperty('--y', `${e.clientY}px`);
     };
-
     window.addEventListener('mousemove', handleMouseMove);
 
-    // Setup Intersection Observer para secciones
+    const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        setActiveSection(entry.target.id);
+      }
+    });
+  },
+  {
+    rootMargin: '-40% 0px -55% 0px',
+    threshold: 0,
+  }
+);
+
+
     sections.forEach((id) => {
       const el = document.getElementById(id);
-      if (el) sectionRefs.current[id] = el;
+      if (el) observer.observe(el);
     });
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
-
-    Object.values(sectionRefs.current).forEach((section) => observer.observe(section));
 
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
@@ -55,17 +54,21 @@ function App() {
   }, []);
 
   return (
-    <div className="main-layout">
-      <Sidebar activeSection={activeSection} onNavClick={handleNavClick} />
+    <div className="scroll-container">
+      <div className="main-layout">
+        <Sidebar activeSection={activeSection} onNavClick={handleNavClick} />
 
-      <div className="content">
-        <About />
-        <Education />
-        <Experience />
-        <Projects />
+        <div className="content">
+          <About />
+          <Skills />
+          <Education />
+          <Experience />
+          <Projects />
+        </div>
       </div>
     </div>
   );
+
 }
 
 export default App;

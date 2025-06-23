@@ -6,11 +6,13 @@ function About() {
     <section id="about">
       <h2>Acerca de mí</h2>
       <p className="paragraph">
-        ¡Hola! Mi nombre es John Edward Fajardo Londoño y soy Ingeniero de Sistemas y Computación. Me apasiona el desarrollo de software y busco constantemente aprender y aplicar nuevas tecnologías que puedan generar impacto, especialmente en contextos donde los recursos son limitados.
-        Durante mi formación y experiencias como desarrollador independiente, he trabajado con lenguajes como .NET, Java, Golang, Python y Node.js, construyendo soluciones desde cero y participando en proyectos colaborativos como Desktop Cloud.
-        Mi enfoque actual está orientado a crecer como desarrollador .NET, sin dejar de lado mi interés por el desarrollo accesible, la optimización de sistemas y la tecnología como medio para reducir brechas digitales. También cuento con un nivel de inglés B1.
+        ¡Hola! Mi nombre es John Edward Fajardo Londoño y soy Ingeniero de Sistemas y Computación. Desde mis primeros pasos en el desarrollo de software, me ha motivado la idea de crear soluciones útiles, accesibles y con impacto real, sin importar la escala del proyecto. 
         <br /><br />
-        Estoy construyendo mi portafolio personal y explorando la idea de compartir contenido en un canal llamado “Código con Café”, pensado como un espacio donde la tecnología se explique sin pretensiones.
+        A lo largo de mi formación y experiencias como desarrollador independiente, he trabajado con tecnologías como .NET, Java, Golang, Python y Node.js. Me encanta aprender nuevas herramientas, explorar distintos paradigmas de programación y enfrentar desafíos técnicos que me reten a crecer constantemente.
+        <br /><br />
+        Mi enfoque profesional es versátil, orientado al desarrollo backend, diseño de sistemas eficientes y mantenibles, y a la optimización de recursos en cualquier entorno. Tengo un fuerte interés en la calidad del software, la claridad del código y el trabajo colaborativo.
+        <br /><br />
+        Me destaco por ser una persona responsable, curiosa y con iniciativa. Disfruto trabajar en equipo, comunicar ideas de forma clara y aprender de otros. También cuento con un nivel de inglés B1, lo que me permite acceder a documentación técnica, colaborar y continuar formándome de forma autónoma.
       </p>
     </section>
   );
