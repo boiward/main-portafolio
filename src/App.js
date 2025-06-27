@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import './App.css';
 import Sidebar from './components/Sidebar';
 import About from './components/About/About';
@@ -9,9 +9,10 @@ import Projects from './components/Projects/Projects';
 
 function App() {
   const [activeSection, setActiveSection] = useState('about');
-  const [isLoading, setIsLoading] = useState(true);
 
-  // Manejo de scroll al hacer clic en el menú
+  // Memoriza las secciones para evitar que cambien en cada render
+  const sections = useMemo(() => ['about', 'skills', 'education', 'experience', 'projects'], []);
+
   const handleNavClick = (id) => {
     const section = document.getElementById(id);
     if (section) {
@@ -21,12 +22,11 @@ function App() {
   };
 
   useEffect(() => {
-    const sections = ['about', 'skills', 'education', 'experience', 'projects'];
-
     const handleMouseMove = (e) => {
       document.body.style.setProperty('--x', `${e.clientX}px`);
       document.body.style.setProperty('--y', `${e.clientY}px`);
     };
+
     window.addEventListener('mousemove', handleMouseMove);
 
     const observer = new IntersectionObserver(
@@ -43,6 +43,7 @@ function App() {
       }
     );
 
+    // Observa las secciones visibles
     sections.forEach((id) => {
       const el = document.getElementById(id);
       if (el) observer.observe(el);
@@ -52,35 +53,21 @@ function App() {
       window.removeEventListener('mousemove', handleMouseMove);
       observer.disconnect();
     };
-  }, []);
-
-  // Simular carga inicial (puedes quitar el timeout en producción)
-  useEffect(() => {
-    const timeout = setTimeout(() => setIsLoading(false), 1000); // 1 segundo de carga
-    return () => clearTimeout(timeout);
-  }, []);
+  }, [sections]);
 
   return (
-    <>
-      {isLoading ? (
-        <div className="preloader">
-          <div className="loader"></div>
+    <div className="scroll-container">
+      <div className="main-layout">
+        <Sidebar activeSection={activeSection} onNavClick={handleNavClick} />
+        <div className="content">
+          <About />
+          <Skills />
+          <Education />
+          <Experience />
+          <Projects />
         </div>
-      ) : (
-        <div className="scroll-container">
-          <div className="main-layout">
-            <Sidebar activeSection={activeSection} onNavClick={handleNavClick} />
-            <div className="content">
-              <About />
-              <Skills />
-              <Education />
-              <Experience />
-              <Projects />
-            </div>
-          </div>
-        </div>
-      )}
-    </>
+      </div>
+    </div>
   );
 }
 
