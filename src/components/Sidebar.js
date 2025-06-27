@@ -1,6 +1,6 @@
 import React from 'react';
-import { FaGithub, FaLinkedin } from "react-icons/fa";
 import './Sidebar.css';
+import { FaGithub, FaLinkedin, FaFileAlt } from 'react-icons/fa';
 
 function Sidebar({ activeSection, onNavClick }) {
   const renderNavLink = (id, label) => (
@@ -38,12 +38,32 @@ function Sidebar({ activeSection, onNavClick }) {
         {renderNavLink('projects', 'Proyectos')}
       </nav>
 
-      <div className="social-social-icons">
-        <a href="https://github.com/boiward?tab=repositories" target="_blank" rel="noopener noreferrer">
+      <div className="social-icons">
+        <a
+          href="https://github.com/boiward?tab=repositories"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="icon-tooltip"
+          data-tooltip="GitHub"
+        >
           <FaGithub size={35} />
         </a>
-        <a href="https://www.linkedin.com/in/john-edward-fajardo-londo%C3%B1o-44883a295/" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://www.linkedin.com/in/john-edward-fajardo-londo%C3%B1o-44883a295/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="icon-tooltip"
+          data-tooltip="LinkedIn"
+        >
           <FaLinkedin size={35} />
+        </a>
+        <a
+          href="/cv.pdf"
+          download
+          className="icon-tooltip"
+          data-tooltip="Descargar CV"
+        >
+          <FaFileAlt className="custom-cv-icon" />
         </a>
       </div>
     </div>

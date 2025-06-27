@@ -80,12 +80,6 @@ html, body {
   font-size: 2rem;
 }
 
-.paragraph {
-  margin-top: 1rem;
-  color: #ffffffec;
-  line-height: 1.6;
-}
-
 .social-icons {
   display: flex;
   justify-content: center;
@@ -176,3 +170,29 @@ h2:not(.sidebar h2) {
 }
 
 
+/*PRELOADER*/
+.preloader {
+  position: fixed;
+  inset: 0;
+  background: #0f172a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease;
+}
+
+.loader {
+  border: 6px solid #1e293b;
+  border-top: 6px solid #4fc3f7;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

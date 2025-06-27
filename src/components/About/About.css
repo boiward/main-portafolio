@@ -2,13 +2,16 @@
   margin-top: 2rem 0;
 }
 
-.paragraph {
+.about-summary {
   margin-top: 0.5rem;
-  margin-bottom: 1.5rem;
-  max-width: 90%;
   text-align: justify;
 
   font-size: 1rem;
   color: #ccc;
   line-height: 1.6;
+}
+
+.icon {
+  margin-left: 6px;
+  vertical-align: middle;
 }

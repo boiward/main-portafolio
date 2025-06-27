@@ -4,14 +4,14 @@ import Sidebar from './components/Sidebar';
 import About from './components/About/About';
 import Education from './components/Education/Education';
 import Experience from './components/Experience/Experience';
-import Projects from './components/Projects/Projects';
 import Skills from './components/Skills/Skills';
+import Projects from './components/Projects/Projects';
 
 function App() {
   const [activeSection, setActiveSection] = useState('about');
+  const [isLoading, setIsLoading] = useState(true);
 
-  const sections = ['about', 'skills', 'education', 'experience', 'projects'];
-
+  // Manejo de scroll al hacer clic en el menú
   const handleNavClick = (id) => {
     const section = document.getElementById(id);
     if (section) {
@@ -21,6 +21,8 @@ function App() {
   };
 
   useEffect(() => {
+    const sections = ['about', 'skills', 'education', 'experience', 'projects'];
+
     const handleMouseMove = (e) => {
       document.body.style.setProperty('--x', `${e.clientX}px`);
       document.body.style.setProperty('--y', `${e.clientY}px`);
@@ -28,19 +30,18 @@ function App() {
     window.addEventListener('mousemove', handleMouseMove);
 
     const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        setActiveSection(entry.target.id);
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      {
+        rootMargin: '-40% 0px -55% 0px',
+        threshold: 0,
       }
-    });
-  },
-  {
-    rootMargin: '-40% 0px -55% 0px',
-    threshold: 0,
-  }
-);
-
+    );
 
     sections.forEach((id) => {
       const el = document.getElementById(id);
@@ -53,22 +54,34 @@ function App() {
     };
   }, []);
 
+  // Simular carga inicial (puedes quitar el timeout en producción)
+  useEffect(() => {
+    const timeout = setTimeout(() => setIsLoading(false), 1000); // 1 segundo de carga
+    return () => clearTimeout(timeout);
+  }, []);
+
   return (
-    <div className="scroll-container">
-      <div className="main-layout">
-        <Sidebar activeSection={activeSection} onNavClick={handleNavClick} />
-
-        <div className="content">
-          <About />
-          <Skills />
-          <Education />
-          <Experience />
-          <Projects />
+    <>
+      {isLoading ? (
+        <div className="preloader">
+          <div className="loader"></div>
         </div>
-      </div>
-    </div>
+      ) : (
+        <div className="scroll-container">
+          <div className="main-layout">
+            <Sidebar activeSection={activeSection} onNavClick={handleNavClick} />
+            <div className="content">
+              <About />
+              <Skills />
+              <Education />
+              <Experience />
+              <Projects />
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   );
-
 }
 
 export default App;

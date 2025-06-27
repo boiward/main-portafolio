@@ -1,14 +1,132 @@
-#projects {
-  padding-top: 2rem;
-}
-
-.paragraph {
+.projects-summary {
   margin-top: 0.5rem;
   margin-bottom: 1.5rem;
-  max-width: 90%;
   text-align: justify;
 
   font-size: 1rem;
   color: #ccc;
   line-height: 1.6;
+}
+
+.project p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.project {
+  gap: 1.5rem;
+  background: linear-gradient(145deg, #0d1a2b, #112240);
+  border-radius: 14px;
+  padding: 1.8rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  align-items: center;
+}
+
+.project h3 {
+  color: #4fc3f7;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.carousel-container {
+  margin-top: 1rem;
+}
+
+.carousel-item {
+  padding: 10px;
+}
+
+.carousel-image {
+  border-radius: 12px;
+  max-height: 240px;
+  width: 100%;
+  object-fit: cover;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.carousel-image:hover {
+  transform: scale(1.03);
+}
+
+.tech-stack {
+  margin-top: 1.5rem;
+}
+
+.tech-stack-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #4fc3f7;
+  margin-bottom: 0.75rem;
+  border-left: 4px solid #4fc3f7;
+  padding-left: 0.6rem;
+}
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tech-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.85rem;
+  color: #e0e0e0;
+  transition: all 0.2s ease;
+}
+
+.tech-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: scale(1.05);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background-color: rgba(0,0,0,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal-image {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+
+.modal-controls {
+  position: absolute;
+  bottom: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+.modal-controls button {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.modal-controls button:hover {
+  background: rgba(255,255,255,0.3);
 }
