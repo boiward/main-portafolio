@@ -1,0 +1,22 @@
+@media (min-width: 768px) {
+
+  .footer {
+    text-align: center;
+    color: #ccc;
+    padding: 1.5rem 0;
+    font-size: 0.9rem;
+    width: 100%;
+    border: none;
+    position: static;
+  }
+
+  /* Estilo centrado flotante */
+  .footer-centered {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.5rem 1rem;
+    z-index: 100;
+  }
+}

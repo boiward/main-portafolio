@@ -1,18 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!--
+      Archivo principal HTML para la SPA de React (Portafolio).
+      Incluye metadatos para SEO, redes sociales, PWA y estilos para el preloader.
+    -->
     <meta charset="utf-8" />
+
+    <!-- Favicon del sitio -->
     <link rel="icon" href="https://www.shareicon.net/data/256x256/2017/02/09/878592_folder_512x512.png" />
+
+    <!-- Responsive: escala para dispositivos móviles -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Color de la barra superior en móviles -->
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
+
+    <!-- SEO básico: descripción para buscadores -->
+    <meta name="description" content="Portafolio profesional de John Edward Fajardo Londoño, desarrollador de software con enfoque en tecnologías modernas como React, Go y .NET." />
+
+    <!-- Etiquetas Open Graph para compartir en redes sociales (Facebook, LinkedIn, etc.) -->
+    <meta property="og:title" content="John Edward Fajardo Londoño | Portafolio Web" />
+    <meta property="og:description" content="Descubre mis proyectos, habilidades y trayectoria como desarrollador de software. Portafolio personal profesional." />
+    <meta property="og:image" content="https://john--fajardo---portafolio.web.app/image-icon.jpg" />
+    <meta property="og:url" content="https://john--fajardo---portafolio.web.app/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card para previsualización en Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="John Edward Fajardo Londoño | Portafolio Web" />
+    <meta name="twitter:description" content="Portafolio de desarrollador de software con proyectos en React, Go y más." />
+    <meta name="twitter:image" content="https://john--fajardo---portafolio.web.app/image-icon.jpg" />
+
+    <!-- Icono para dispositivos Apple y manifiesto PWA -->
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <!-- Título de la pestaña del navegador -->
     <title>John Edward Fajardo Londoño - Portafolio</title>
 
+    <!--
+      Estilos para el preloader (pantalla de carga animada).
+      Se muestra hasta que la app React termina de cargar.
+    -->
     <style>
       #preloader {
         position: fixed;
@@ -46,14 +76,28 @@
   </head>
   <body>
 
+    <!--
+      Mensaje para usuarios con JavaScript deshabilitado.
+      La app React requiere JS para funcionar.
+    -->
     <noscript>You need to enable JavaScript to run this app.</noscript>
 
+    <!--
+      Preloader: se muestra mientras la app React está cargando.
+      Se elimina automáticamente al terminar la carga.
+    -->
     <div id="preloader">
       <div class="loader"></div>
     </div>
 
+    <!--
+      Contenedor raíz donde React renderiza la aplicación.
+    -->
     <div id="root"></div>
 
+    <!--
+      Script para ocultar y eliminar el preloader cuando la app termina de cargar.
+    -->
     <script>
       window.addEventListener('load', () => {
         const preloader = document.getElementById('preloader');

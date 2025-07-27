@@ -1,0 +1,123 @@
+{
+  "about": {
+    "title": "About Me",
+    "summary": "Hi! I'm John Edward Fajardo Londoño, a Systems and Computing Engineer. Since I started in the software development world, I’ve been passionate about creating understandable, functional, and impactful solutions.",
+    "technologies": "I’ve worked with technologies like Java, Golang, .NET, Python, and Node.js, focusing mainly on backend development and the design of efficient and sustainable systems.",
+    "motivation": "I’m driven by constant learning, discovering new tools and approaches, and tackling technical challenges that strengthen my professional skills.",
+    "values": "I deeply value code clarity, effective collaboration, and teamwork.",
+    "english": "I also have a B1 level of English, which allows me to operate in global environments, access technical documentation, and continue learning independently."
+  },
+
+  "sidebar": {
+    "role": "Software Developer",
+    "slogan": "Building solid, accessible, and purposeful software",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "downloadCV": "Download CV",
+    "about": "About Me",
+    "skills": "Skills",
+    "education": "Education",
+    "experience": "Experience",
+    "projects": "Projects"
+  },
+
+  "skills": {
+    "title": "Skills & Technologies",
+    "summary": {
+      "tech": "I work with modern technologies like ",
+      "practices": "I focus on applying good practices like writing clean code, designing modular structures, and optimizing app performance.",
+      "personal": "Personally, I stand out for my critical thinking, autonomy, and adaptability in changing environments.",
+      "collaboration": "I enjoy communicating ideas clearly and collaborating with diverse teams to build impactful solutions."
+    },
+    "categories": {
+      "tech": "Languages & Technologies",
+      "soft": "Soft Skills",
+      "other": "Other Knowledge"
+    },
+    "soft": {
+      "communication": "Effective Communication",
+      "teamwork": "Teamwork",
+      "autonomy": "Autonomy & Proactiveness",
+      "problemSolving": "Problem Solving",
+      "learning": "Continuous Learning"
+    },
+    "other": {
+      "designPatterns": "Design Patterns",
+      "versionControl": "Git / Version Control",
+      "restApis": "REST APIs",
+      "unitTesting": "Unit Testing",
+      "performance": "Performance Optimization",
+      "english": "English Level B1"
+    }
+  },
+
+  "education": {
+    "title": "Education",
+    "summary": {
+      "tech": "I began my academic journey at SENA, where I developed a solid technical foundation focused on solving real-world problems through practice.",
+      "university": "Later, at the University of Quindío, I strengthened my theoretical knowledge in systems engineering, complementing my previous experience.",
+      "combined": "This combination of technical and university education allows me to approach projects with a comprehensive and balanced perspective."
+    },
+    "entries": [
+      {
+        "institution": "SENA",
+        "degree": "Technical Degree in Software Programming",
+        "period": "2016 - 2018",
+        "institutionLogo": "/logos/sena.png",
+        "description": "SENA provided me with a strong and practice-oriented technical education, strengthening my programming logic and development skills from an early stage."
+      },
+      {
+        "institution": "University of Quindío",
+        "degree": "Systems and Computing Engineer",
+        "period": "2018 - 2024",
+        "institutionLogo": "/logos/uniquindio.png",
+        "description": "At the University of Quindío, I deepened my understanding of software engineering principles, databases, system architecture, and modern development methodologies."
+      }
+    ]
+  },
+
+  "experience": {
+    "title": "Experience",
+    "summary": {
+      "academic": "My experience combines university and personal projects, applying Systems Engineering principles in a practical way.",
+      "backend": "I have developed efficient and scalable backend solutions,",
+      "frontend": "as well as functional user-centered interfaces.",
+      "skills": "These experiences have strengthened my technical skills, critical thinking, and ability to solve real-world problems."
+    },
+    "entries": [
+      {
+        "title": "Desktop Cloud – University of Quindío",
+        "date": "2023 - 2024",
+        "description": "Thesis project focused on providing virtual desktops accessible from anywhere using open-source technologies.\n\nI led the design and implementation of the backend in Golang, creating authentication flows, session management, and remote connections. I also integrated the desktop client, enabling real-time synchronization.\n\nI gained hands-on experience in environment virtualization, containerization with Docker, and database management with MariaDB, all under principles of scalability, modularity, and security.",
+        "technologies": ["Golang", "Javascript", "Docker", "MariaDB"]
+      },
+      {
+        "title": "Business Applications – Freelance",
+        "date": "2024 - Present",
+        "description": "I have developed various fullstack applications combining technologies such as React, .NET, Golang, and Java, focused on efficiency, clean architecture, and usability.\n\nI explored REST API design, accessible interfaces, and deployment in resource-constrained environments. These experiences strengthened my autonomy, adaptability, and practical approach to real-world solutions.",
+        "technologies": ["Python", "Java", "Golang", "React", "Node.js"]
+      }
+    ]
+  },
+
+  "projects": {
+    "title": "Projects",
+    "summary": {
+      "one": "This section showcases some of the most representative projects I’ve developed, where I combine theory and practice in real-world environments.",
+      "two": "From full solutions with backend and frontend to functional interfaces focused on user experience.",
+      "three": "Each project reflects my passion for clean code, efficient design, and continuous learning.",
+      "four": "All of them were developed using modern tools and solid software engineering principles."
+    },
+    "techStack": "Technologies used",
+    "items": {
+      "0": {
+        "title": "El Búho Sabio",
+        "description": "An educational platform focused on critical reading for elementary school children.\nDeveloped with React, Tailwind, and Firebase for the frontend, and Golang for the backend.\nIncludes authentication, interactive exercise system, and an admin panel."
+      },
+      "1": {
+        "title": "NexBoard",
+        "description": "Monitoring dashboard for hardware and software metrics.\nBuilt with React, Tailwind, Node.js, and Golang.\nCommunicates with a local client that collects system data and sends it via a RESTful API.\nData is visualized using Chart.js and stored with SQLite."
+      }
+    }
+  }
+}

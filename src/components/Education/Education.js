@@ -3,26 +3,12 @@ import './Education.css';
 import { motion } from 'framer-motion';
 import { FaTools, FaUniversity } from 'react-icons/fa';
 import { HiAcademicCap } from 'react-icons/hi';
+import { useTranslation } from 'react-i18next';
 
 function Education() {
-  const educationData = [
-    {
-      institution: 'SENA',
-      degree: 'Técnico en Programación de Software',
-      period: '2016 - 2018',
-      institutionLogo: '/logos/sena.png',
-      description:
-        'El SENA me brindó una formación técnica sólida y enfocada en la práctica, fortaleciendo mi lógica de programación y habilidades de desarrollo desde una etapa temprana.',
-    },
-    {
-      institution: 'Universidad del Quindío',
-      degree: 'Ingeniero de Sistemas y Computación',
-      period: '2018 - 2024',
-      institutionLogo: '/logos/uniquindio.png',
-      description:
-        'En la Universidad del Quindío profundicé en los fundamentos teóricos de la ingeniería de software, bases de datos, arquitectura de sistemas y metodologías modernas de desarrollo.',
-    },
-  ];
+  const { t } = useTranslation();
+
+  const educationData = t('education.entries', { returnObjects: true });
 
   return (
     <motion.section
@@ -33,16 +19,16 @@ function Education() {
       viewport={{ once: true, amount: 0.2 }}
     >
       <section id="education">
-        <h2>Educación</h2>
+        <h2>{t('education.title')}</h2>
         <p className="education-summary">
+          {t('education.summary.tech')}
           <FaTools className="icon" color="#4fc3f7" />
-          Inicié mi formación académica en el SENA, donde desarrollé una base técnica orientada a la resolución práctica de problemas reales.
           <br /><br />
+          {t('education.summary.university')}
           <FaUniversity className="icon" color="#c792ea" />
-          Luego, en la Universidad del Quindío, consolidé mis conocimientos teóricos en ingeniería de sistemas, complementando la experiencia previa.
           <br /><br />
+          {t('education.summary.combined')}
           <HiAcademicCap className="icon" color="#ffcb6b" />
-          Esta combinación de formación técnica y universitaria me permite abordar proyectos con una visión integral y balanceada.
         </p>
 
         <div className="education-cards">

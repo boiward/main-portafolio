@@ -10,14 +10,17 @@ import {
   SiReact, SiTailwindcss, SiFirebase, SiChartdotjs, SiJavascript,
   SiGoland, SiNodedotjs, SiExpress, SiHtml5, SiSqlite, SiGit
 } from 'react-icons/si';
+import { useTranslation } from 'react-i18next';
 
 function Projects() {
+  const { t } = useTranslation();
+
   const [modalImageIndex, setModalImageIndex] = useState({ projectIndex: null, imageIndex: null });
+
   const projects = useMemo(() => ([
     {
-      title: "El Búho Sabio",
-      description:
-        "Aplicación web para la gestión y compra de libros. Ofrece un catálogo interactivo, filtros por categoría o autor, sistema de usuarios, carrito de compras y panel de administración...",
+      title: t('projects.items.0.title'),
+      description: t('projects.items.0.description'),
       images: [
         "/projects/el-buho-sabio/el-buho-sabio_1.png",
         "/projects/el-buho-sabio/el-buho-sabio_2.png",
@@ -37,13 +40,11 @@ function Projects() {
         { name: "JavaScript", icon: <SiJavascript color="#f7df1e" /> },
         { name: "React", icon: <SiReact color="#61dafb" /> },
         { name: "Firebase", icon: <SiFirebase color="#ffca28" /> },
-
       ],
     },
     {
-      title: "NexBoard",
-      description:
-        "NexBoard es un panel de administración que centraliza métricas clave de una aplicación web o móvil...",
+      title: t('projects.items.1.title'),
+      description: t('projects.items.1.description'),
       images: [
         "/projects/nex-board/nex-board-1.png",
         "/projects/nex-board/nex-board-2.png",
@@ -55,17 +56,15 @@ function Projects() {
         { name: "HTML5", icon: <SiHtml5 color="#e34f26" /> },
         { name: "Tailwind CSS", icon: <SiTailwindcss color="#38bdf8" /> },
         { name: "JavaScript", icon: <SiJavascript color="#f7df1e" /> },
-
         { name: "Node.js", icon: <SiNodedotjs color="#3c873a" /> },
         { name: "Express.js", icon: <SiExpress color="#ffffff" /> },
         { name: "Golang", icon: <SiGoland color="#00add8" /> },
-
         { name: "SQLite", icon: <SiSqlite color="#003b57" /> },
         { name: "Chart.js", icon: <SiChartdotjs color="#ff6384" /> },
         { name: "Git", icon: <SiGit color="#f1502f" /> },
-      ], 
+      ],
     },
-  ]), []);
+  ]), [t]);
 
   const responsive = {
     desktop: { breakpoint: { max: 3000, min: 1024 }, items: 3 },
@@ -154,21 +153,29 @@ function Projects() {
       viewport={{ once: true, amount: 0.2 }}
     >
       <section className="projects-section">
-        <h2>Proyectos</h2>
-        <p className="projects-summary">
-          <FaCode style={{ marginRight: '8px', color: '#c3e88d' }} /> En esta sección presento algunos de los proyectos...
-          <br /><br />
-          <FaLaptopCode style={{ marginRight: '8px', color: '#82aaff' }} /> Desde soluciones completas...
-          <br />
-          <FaRocket style={{ marginRight: '8px', color: '#ffcb6b' }} /> Cada proyecto refleja...
-          <br /><br />
-          <FaTools style={{ marginRight: '8px', color: '#61dafb' }} /> Todos han sido desarrollados...
+        <h2>{t('projects.title')}</h2>
+        {['one', 'two', 'three', 'four'].map((key, i) => (
+        <p className="projects-summary" key={i}>
+          {t(`projects.summary.${key}`)}
+          {i === 0 && <FaCode style={{ marginLeft: '8px', color: '#c3e88d' }} />}
+          {i === 1 && <FaLaptopCode style={{ marginLeft: '8px', color: '#82aaff' }} />}
+          {i === 2 && <FaRocket style={{ marginLeft: '8px', color: '#ffcb6b' }} />}
+          {i === 3 && <FaTools style={{ marginLeft: '8px', color: '#61dafb' }} />}
         </p>
+      ))}
+
 
         {projects.map((project, index) => (
           <div className="project" key={index}>
             <h3>{project.title}</h3>
-            <p>{project.description}</p>
+            <p className="project-description">
+              {project.description.split('\n').map((line, i) => (
+                <React.Fragment key={i}>
+                  {line.trim()}
+                  <br />
+                </React.Fragment>
+              ))}
+            </p>
             <Carousel
               responsive={responsive}
               infinite={false}
@@ -195,7 +202,7 @@ function Projects() {
               transition={{ duration: 0.4, delay: 0.1 }}
               viewport={{ once: true }}
             >
-              <h4 className="tech-stack-title">Tecnologías utilizadas</h4>
+              <h4 className="tech-stack-title">{t('projects.techStack')}</h4>
               <ul className="tech-list">
                 {project.techStack.map((tech, idx) => (
                   <li key={idx} className="tech-item">
