@@ -1,7 +1,7 @@
 
 # 🚀 Portafolio Web - John Edward Fajardo Londoño
 
-Bienvenido al repositorio del portafolio profesional de John Edward Fajardo Londoño, Ingeniero de Sistemas y Computación, apasionado por el desarrollo de software, la arquitectura de sistemas y la innovación tecnológica.
+Bienvenido al repositorio de mi portafolio profesional, Soy Ingeniero de Sistemas y Computación, apasionado por el desarrollo de software, la arquitectura de sistemas y la innovación tecnológica.
 
 ## 🧑‍💻 Sobre el proyecto
 
@@ -71,9 +71,9 @@ Soy Ingeniero de Sistemas y Computación, enfocado en el desarrollo backend, arq
 
 ## 📫 Contacto
 
-- [LinkedIn](https://www.linkedin.com/in/john-edward-fajardo-londono/)
+- [LinkedIn](https://www.linkedin.com/in/john-edward-fajardo-londo%C3%B1o-44883a295/)
 - [GitHub](https://github.com/boiward)
-- Email: johnedwardfajardo@gmail.com
+- johne.fajardol@gmail.com
 
 ---
 
