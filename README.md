@@ -1,70 +1,80 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 🚀 Portafolio Web - John Edward Fajardo Londoño
 
-## Available Scripts
+Bienvenido al repositorio del portafolio profesional de John Edward Fajardo Londoño, Ingeniero de Sistemas y Computación, apasionado por el desarrollo de software, la arquitectura de sistemas y la innovación tecnológica.
 
-In the project directory, you can run:
+## 🧑‍💻 Sobre el proyecto
 
-### `npm start`
+Este portafolio está construido con **React** y tecnologías modernas, pensado para mostrar proyectos, habilidades, experiencia y formación de manera visual, interactiva y profesional. El objetivo es inspirar confianza y demostrar competencias técnicas y blandas en el mundo del desarrollo de software.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## ✨ Características principales
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Internacionalización (i18n):** Soporte multilenguaje (español/inglés) para llegar a una audiencia global.
+- **Animaciones y UX:** Interfaz moderna, responsiva y con animaciones suaves usando Framer Motion y React Icons.
+- **Proyectos destacados:** Visualización de proyectos reales en backend, frontend y fullstack (Java, Go, .NET, Node.js, React, Firebase, etc).
+- **Experiencia y formación:** Secciones dedicadas a la trayectoria académica y profesional.
+- **Skills técnicas y blandas:** Muestra de habilidades en tecnologías, metodologías ágiles, trabajo en equipo y comunicación.
+- **PWA Ready:** Listo para funcionar como Progressive Web App.
 
-### `npm test`
+## 🏗️ Estructura del repositorio
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+├── public/           # Archivos estáticos y recursos
+├── src/              # Código fuente principal (componentes, estilos, i18n)
+├── build/            # Archivos generados para producción (ignorado en git)
+├── package.json      # Dependencias y scripts
+├── .gitignore        # Exclusión de archivos irrelevantes
+```
 
-### `npm run build`
+## 🚦 Instalación y ejecución
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/boiward/main-portafolio.git
+   cd main-portafolio
+   ```
+2. Instala las dependencias:
+   ```bash
+   npm install
+   ```
+3. Ejecuta en modo desarrollo:
+   ```bash
+   npm start
+   ```
+4. Accede a [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🛠️ Scripts útiles
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- `npm start` - Ejecuta la app en modo desarrollo
+- `npm run build` - Genera la versión optimizada para producción
+- `npm test` - Ejecuta pruebas unitarias (si existen)
 
-### `npm run eject`
+## 🌐 Tecnologías utilizadas
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- React, JavaScript (ES6+)
+- Framer Motion, React Icons
+- i18next, react-i18next
+- Firebase (hosting)
+- CSS moderno y responsive
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📂 Despliegue
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+El portafolio está desplegado en Firebase Hosting:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+[https://john--fajardo---portafolio.web.app/](https://john--fajardo---portafolio.web.app/)
 
-## Learn More
+## 👨‍💼 Sobre mí
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Soy Ingeniero de Sistemas y Computación, enfocado en el desarrollo backend, arquitectura de software y soluciones escalables. Me motiva el aprendizaje constante, la colaboración y la creación de productos con impacto real.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+> “La tecnología es el puente entre la creatividad y la solución de problemas.”
 
-### Code Splitting
+## 📫 Contacto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- [LinkedIn](https://www.linkedin.com/in/john-edward-fajardo-londono/)
+- [GitHub](https://github.com/boiward)
+- Email: johnedwardfajardo@gmail.com
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+¡Explora el código, revisa los proyectos y conecta para colaborar en nuevas ideas!
