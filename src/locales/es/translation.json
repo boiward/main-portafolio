@@ -96,6 +96,12 @@
         "date": "2024 - Actualidad",
         "description": "He desarrollado diversas aplicaciones fullstack combinando tecnologías como React, .NET, Golang y Java, enfocadas en eficiencia, arquitectura limpia y usabilidad.\n\nExploré el diseño de APIs REST, interfaces accesibles y despliegue en entornos de recursos limitados. Estas experiencias fortalecieron mi autonomía, adaptabilidad y enfoque práctico en soluciones reales.",
         "technologies": ["Python", "Java", "Golang", "React", "Node.js"]
+      },
+      {
+        "title": "Desarrollador Backend – IPCOM.ai",
+        "date": "Agosto 2025 - Actualidad",
+        "description": "IPCOM.ai es una plataforma de comunicaciones empresariales que integra VoIP, análisis de conversaciones con inteligencia artificial y comunicación omnicanal (voz, SMS, email y chat) para optimizar la operación y la experiencia del cliente.\n\nComo desarrollador backend, participo en el diseño e implementación de servicios que soportan los flujos de comunicación en tiempo real de la plataforma, trabajando en un entorno distribuido y orientado a la escalabilidad.\n\nEsta experiencia me ha permitido profundizar en arquitecturas de microservicios, integración de APIs y desarrollo en entornos de producción con alta disponibilidad.",
+        "technologies": ["Golang", "Python", "Docker", "REST APIs", "Microservices"]
       }
     ]
   },
