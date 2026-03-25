@@ -11,15 +11,7 @@ function Sidebar({ activeSection, onNavClick }) {
       className={activeSection === id ? 'active nav-link' : 'nav-link'}
       onClick={() => onNavClick(id)}
     >
-      <span
-        className="nav-indicator"
-        style={{
-          width: activeSection === id ? '30px' : '10px',
-          backgroundColor: activeSection === id ? 'white' : 'gray',
-          height: '2px',
-          transition: 'width 0.3s ease, background-color 0.3s ease'
-        }}
-      ></span>
+      <span className={`nav-indicator${activeSection === id ? ' nav-indicator--active' : ''}`}></span>
       {t(labelKey)}
     </button>
   );

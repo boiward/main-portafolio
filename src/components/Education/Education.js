@@ -18,37 +18,35 @@ function Education() {
       transition={{ duration: 0.6, delay: 0.2 }}
       viewport={{ once: true, amount: 0.2 }}
     >
-      <section id="education">
-        <h2>{t('education.title')}</h2>
-        <p className="education-summary">
-          {t('education.summary.tech')}
-          <FaTools className="icon" color="#4fc3f7" />
-          <br /><br />
-          {t('education.summary.university')}
-          <FaUniversity className="icon" color="#c792ea" />
-          <br /><br />
-          {t('education.summary.combined')}
-          <HiAcademicCap className="icon" color="#ffcb6b" />
-        </p>
+      <h2>{t('education.title')}</h2>
+      <p className="education-summary">
+        {t('education.summary.tech')}
+        <FaTools className="icon" color="#4fc3f7" />
+        <br /><br />
+        {t('education.summary.university')}
+        <FaUniversity className="icon" color="#c792ea" />
+        <br /><br />
+        {t('education.summary.combined')}
+        <HiAcademicCap className="icon" color="#ffcb6b" />
+      </p>
 
-        <div className="education-cards">
-          {educationData.map((edu, index) => (
-            <div className="education-card" key={index}>
-              <img
-                src={edu.institutionLogo}
-                alt={`Logo de ${edu.institution}`}
-                className="institution-logo"
-              />
-              <div className="education-info">
-                <h3>{edu.institution}</h3>
-                <p className="degree">{edu.degree}</p>
-                <p className="period">{edu.period}</p>
-                <p className="institution-description">{edu.description}</p>
-              </div>
+      <div className="education-cards">
+        {educationData.map((edu, index) => (
+          <div className="education-card" key={index}>
+            <img
+              src={edu.institutionLogo}
+              alt={`Logo de ${edu.institution}`}
+              className="institution-logo"
+            />
+            <div className="education-info">
+              <h3>{edu.institution}</h3>
+              <p className="degree">{edu.degree}</p>
+              <p className="period">{edu.period}</p>
+              <p className="institution-description">{edu.description}</p>
             </div>
-          ))}
-        </div>
-      </section>
+          </div>
+        ))}
+      </div>
     </motion.section>
   );
 }

@@ -3,7 +3,7 @@ import './Skills.css';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 
-import { FaReact, FaDocker, FaPeopleArrows, FaBrain, FaJava, FaNodeJs, FaGitAlt } from 'react-icons/fa';
+import { FaReact, FaDocker, FaPeopleArrows, FaBrain, FaJava, FaNodeJs, FaGitAlt, FaVial, FaTachometerAlt } from 'react-icons/fa';
 import { SiDotnet, SiGo, SiPython, SiJavascript, SiMysql, SiApachespark } from 'react-icons/si';
 import { BsLightbulb } from 'react-icons/bs';
 import { MdOutlineDesignServices, MdApi } from 'react-icons/md';
@@ -75,8 +75,8 @@ function Skills() {
             <li><MdOutlineDesignServices color="#81C784" /> {t('skills.other.designPatterns')}</li>
             <li><FaGitAlt color="#F1502F" /> {t('skills.other.versionControl')}</li>
             <li><MdApi color="#4DB6AC" /> {t('skills.other.restApis')}</li>
-            <li><SiPython color="#FFCA28" /> {t('skills.other.unitTesting')}</li>
-            <li><FaReact color="#90CAF9" /> {t('skills.other.performance')}</li>
+            <li><FaVial color="#FFCA28" /> {t('skills.other.unitTesting')}</li>
+            <li><FaTachometerAlt color="#90CAF9" /> {t('skills.other.performance')}</li>
             <li><TbLanguage color="#64B5F6" /> {t('skills.other.english')}</li>
           </ul>
         </div>

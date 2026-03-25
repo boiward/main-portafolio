@@ -18,46 +18,44 @@ function Experience() {
       transition={{ duration: 0.6, delay: 0.3 }}
       viewport={{ once: true, amount: 0.2 }}
     >
-      <section id="experience">
-        <h2>{t('experience.title')}</h2>
-        <p className="experience-summary">
-          {t('experience.summary.academic')}
-          <FaUniversity className="icon" color="#4fc3f7" />
-          <br /><br />
-          {t('experience.summary.backend')}
-          <SiBackendless className="icon" color="#c792ea" />
-          <br />
-          {t('experience.summary.frontend')}
-          <SiFrontendmentor className="icon" color="#f78c6c" />
-          <br /><br />
-          {t('experience.summary.skills')}
-          <FaTools className="icon" color="#ffcb6b" />
-        </p>
+      <h2>{t('experience.title')}</h2>
+      <p className="experience-summary">
+        {t('experience.summary.academic')}
+        <FaUniversity className="icon" color="#4fc3f7" />
+        <br /><br />
+        {t('experience.summary.backend')}
+        <SiBackendless className="icon" color="#c792ea" />
+        <br />
+        {t('experience.summary.frontend')}
+        <SiFrontendmentor className="icon" color="#f78c6c" />
+        <br /><br />
+        {t('experience.summary.skills')}
+        <FaTools className="icon" color="#ffcb6b" />
+      </p>
 
-        <div className="experience-cards">
-          {experienceData.map((exp, index) => (
-            <div className="experience-card" key={index}>
-              <div className="experience-header">
-                <h3 className="experience-title">{exp.title}</h3>
-                <span className="experience-date">{exp.date}</span>
-              </div>
-              <p className="experience-description">
-                {exp.description.split('\n\n').map((para, i) => (
-                  <span key={i}>
-                    {para}
-                    <br /><br />
-                  </span>
-                ))}
-              </p>
-              <div className="tech-tags">
-                {exp.technologies.map((tech, i) => (
-                  <span className="tech-tag" key={i}>{tech}</span>
-                ))}
-              </div>
+      <div className="experience-cards">
+        {experienceData.map((exp, index) => (
+          <div className="experience-card" key={index}>
+            <div className="experience-header">
+              <h3 className="experience-title">{exp.title}</h3>
+              <span className="experience-date">{exp.date}</span>
             </div>
-          ))}
-        </div>
-      </section>
+            <p className="experience-description">
+              {exp.description.split('\n\n').map((para, i) => (
+                <span key={i}>
+                  {para}
+                  <br /><br />
+                </span>
+              ))}
+            </p>
+            <div className="tech-tags">
+              {exp.technologies.map((tech, i) => (
+                <span className="tech-tag" key={i}>{tech}</span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
     </motion.section>
   );
 }

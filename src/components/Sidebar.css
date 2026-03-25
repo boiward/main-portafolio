@@ -142,6 +142,19 @@
   opacity: 1;
 }
 
+.nav-indicator {
+  display: inline-block;
+  width: 10px;
+  height: 2px;
+  background-color: gray;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-indicator--active {
+  width: 30px;
+  background-color: white;
+}
+
 .custom-cv-icon {
   height: 32px;
   width: 38px;
@@ -196,20 +209,7 @@
   }
 
   .nav-link {
-    background: none;
-    border: none;
-    color: inherit;
-    font: inherit;
-    cursor: pointer;
-    text-align: left;
-    display: flex;
-    align-items: center;
-    gap: 10px;
     font-size: 1rem;
-    padding: 0.45rem 0;
-    border-radius: 6px;
-    position: relative;
-    transition: color 0.25s ease, background-color 0.25s ease;
   }
 
   .nav-link.active {
