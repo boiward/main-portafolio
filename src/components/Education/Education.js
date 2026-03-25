@@ -34,7 +34,7 @@ function Education() {
         {educationData.map((edu, index) => (
           <div className="education-card" key={index}>
             <img
-              src={edu.institutionLogo}
+              src={`${process.env.PUBLIC_URL}${edu.institutionLogo}`}
               alt={`Logo de ${edu.institution}`}
               className="institution-logo"
             />

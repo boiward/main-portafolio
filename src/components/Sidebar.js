@@ -43,7 +43,7 @@ function Sidebar({ activeSection, onNavClick }) {
             <FaLinkedin size={35} />
           </a>
           <a
-            href="/cv.pdf"
+            href={`${process.env.PUBLIC_URL}/cv.pdf`}
             download
             className="icon-tooltip"
             data-tooltip={t('sidebar.downloadCV')}
