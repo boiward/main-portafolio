@@ -1,120 +1,78 @@
+.education-summary {
+  margin-top: 0.75rem;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  color: #94a3b8;
+  line-height: 1.8;
+  max-width: 640px;
+}
+
 .education-cards {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  margin-top: 1rem;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
 }
 
 .education-card {
   display: flex;
-  gap: 1.5rem;
-  background: linear-gradient(145deg, #0d1a2b, #112240);
-  border-radius: 14px;
-  padding: 1.8rem;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  align-items: center;
-  min-height: 160px;
+  gap: 1.75rem;
+  background: linear-gradient(145deg, #0d1a2b, #0f2040);
+  border: 1px solid rgba(79, 195, 247, 0.08);
+  border-radius: 16px;
+  padding: 1.75rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  align-items: flex-start;
 }
 
 .education-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(79, 195, 247, 0.15);
+  border-color: rgba(79, 195, 247, 0.2);
 }
 
 .institution-logo {
-  width: 120px;
-  height: 120px;
+  width: 80px;
+  height: 80px;
   flex-shrink: 0;
-  border-radius: 8px;
+  border-radius: 12px;
   object-fit: contain;
-  background-color: #ffffff11;
-  box-shadow: 0 0 6px rgba(255, 255, 255, 0.2); /* brillo suave */
-  padding: 0.3rem;
-  align-self: flex-start; /* Mueve el logo hacia arriba */
-  margin-top: 0.3rem;      /* Ajuste fino opcional */
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.5rem;
 }
 
-
-/* Contenedor del contenido textual */
 .education-info {
   display: flex;
   flex-direction: column;
+  gap: 0.25rem;
 }
 
 .education-card h3 {
-  font-size: 1.4rem;
-  margin-bottom: 0.3rem;
-  color: #4fc3f7;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #e2e8f0;
+  margin-bottom: 0.1rem;
 }
 
 .degree {
-  font-weight: 600;
-  margin-bottom: 0.2rem;
-  color: #ffffffde;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #4fc3f7;
 }
 
 .period {
-  font-style: italic;
-  font-size: 0.9rem;
-  margin-bottom: 0.6rem;
-  color: #90a4ae;
+  font-size: 0.82rem;
+  color: #64748b;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.02em;
 }
 
-/* Nueva: Descripción de la institución */
 .institution-description {
-  font-size: 0.95rem;
-  color: #ffffffc5;
-  line-height: 1.5;
-  max-width: 95%;
-}
-
-.education-summary {
-  margin-top: 0.5rem;
-  margin-bottom: 1.5rem;
-  text-align: justify;
-
-  font-size: 1rem;
-  color: #ccc;
+  font-size: 0.92rem;
+  color: #94a3b8;
   line-height: 1.6;
-}
-
-@media (max-width: 767px) {
-  .education-card {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem;
-    min-height: auto;
-  }
-
-  .institution-logo {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 1rem;
-    align-self: center;
-  }
-
-  .education-info {
-    width: 100%;
-  }
-
-  .education-card h3 {
-    font-size: 1.2rem;
-    text-align: center;
-    width: 100%;
-  }
-
-  .degree,
-  .period,
-  .institution-description {
-    text-align: center;
-  }
-
-  .institution-description {
-    font-size: 0.88rem;
-    line-height: 1.4;
-    margin-top: 0.5rem;
-  }
 }
 
 .icon {
@@ -122,3 +80,30 @@
   vertical-align: middle;
 }
 
+@media (max-width: 767px) {
+  .education-card {
+    flex-direction: column;
+    align-items: center;
+    padding: 1.25rem;
+    text-align: center;
+  }
+
+  .institution-logo {
+    width: 72px;
+    height: 72px;
+  }
+
+  .education-info {
+    align-items: center;
+    width: 100%;
+  }
+
+  .education-card h3 {
+    font-size: 1.05rem;
+  }
+
+  .institution-description {
+    font-size: 0.88rem;
+    text-align: center;
+  }
+}
